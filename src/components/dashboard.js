@@ -3,7 +3,7 @@ export default function Dashboard() {
     return (
         <div className="flex flex-col">
             <div>
-            div1
+            div 1 client
             </div>
 
             <div>
