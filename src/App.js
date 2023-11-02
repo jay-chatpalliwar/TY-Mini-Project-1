@@ -5,6 +5,8 @@ import Dashboard  from './components/dashboard'
 import Sideb from './components/Sideb'
 import EmojiPicker from 'emoji-picker-react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Resource from "./pages/Resource";
+import Profile from "./pages/Profile";
 
 function App() {
   const user = "Jay Chatpalliwar";
@@ -16,6 +18,8 @@ function App() {
           {/* <Route index element={<Home />} /> */}
           <Route path="doubtforum" element={<Forum user={user} />} />
           <Route path="dashboard" element={<Dashboard/>} />
+           <Route path="/resources" element={<Resource></Resource>}></Route>
+           <Route path="/profile" element={<Profile></Profile>}> </Route>
           {/* <Route path="*" element={<NoPage />} /> */}
         </Route>
 
