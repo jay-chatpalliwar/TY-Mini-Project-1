@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Menu from './components/menu'
+import Forum from './components/forum'
+import Dashboard  from './components/dashboard'
+import Sideb from './components/Sideb'
+import EmojiPicker from 'emoji-picker-react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+  const user = "Jay Chatpalliwar";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-row gap-1 overflow-hidden scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-slate-700 scrollbar-track-slate-300 ">
+    <Sideb/>
+    <Routes>
+    <Route path="/">
+          {/* <Route index element={<Home />} /> */}
+          <Route path="doubtforum" element={<Forum user={user} />} />
+          <Route path="dashboard" element={<Dashboard/>} />
+          {/* <Route path="*" element={<NoPage />} /> */}
+        </Route>
+
+    </Routes>
     </div>
   );
 }
-
 export default App;
