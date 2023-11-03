@@ -7,7 +7,7 @@ const {auth,isStudent,isAdmin,isRecruiter} = require('../middlewares/auth');
 const {signup,login} = require("../controllers/Auth");
 
  const { resetPassword } = require('../controllers/common/resetPassword');
- const { resetToken } = require('../controllers/common/resetToken');
+
 
 const { UserDetails } = require('../controllers/common/UserDetails');
 const { fetchResources } = require('../controllers/common/fetchResources');
@@ -24,7 +24,7 @@ router.post('/signup',signup);
 router.post('/login',login);
 
 //*reset password
-router.post('/resetToken',resetToken)
+
 router.post('/change-password',resetPassword)
 
 //*resource related testing 
@@ -40,7 +40,7 @@ router.get('/getTagBySem',getTagBySem)
 
 //*profile 
 router.post('/updateProfile',auth,updateprofile)
-router.get('/getProfile',auth,UserDetails)
+router.post('/getProfile',auth,UserDetails)
 
 
 
