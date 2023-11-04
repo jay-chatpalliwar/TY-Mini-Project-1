@@ -41,6 +41,7 @@ router.get('/getTagBySem',getTagBySem)
 //*profile 
 router.post('/updateProfile',auth,updateprofile)
 router.post('/getProfile',auth,UserDetails)
+router.post('/deleteProfile',auth,deleteprofile)
 
 
 
