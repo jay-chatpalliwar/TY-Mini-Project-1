@@ -45,7 +45,7 @@ const linkDeleter = (id)=>{
 
 const getResources = async()=>{
  try{
-    const response = await fetch(`${BASE_URL}/fetchResources`, {
+    const response = await fetch(`http://localhost:4000/fetchResources`, {
     method: 'GET', // HTTP request method
    headers: {
     'Content-Type': 'application/json', 
@@ -79,7 +79,7 @@ const postResource = async()=>{
 try
 {  
    
-   const response = await fetch(`${BASE_URL}/createResource` , {
+   const response = await fetch(`http://localhost:4000/createResource` , {
     method: 'POST', // HTTP request method
    headers: {
     'Content-Type': 'application/json', 
